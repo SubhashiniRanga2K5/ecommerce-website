@@ -1,0 +1,9 @@
+body {
+  scroll-behavior: smooth;
+  background-color:#f8f9fa;
+}
+.backtop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
