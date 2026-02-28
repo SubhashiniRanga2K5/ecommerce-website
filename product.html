@@ -67,10 +67,17 @@ Back to Home
 
 <script>
 function addToCart(productName) {
+
+  // Remove existing alert if any
+  const existingAlert = document.querySelector(".cart-alert");
+  if (existingAlert) {
+    existingAlert.remove();
+  }
+
   const message = document.createElement("div");
-  message.className = "alert alert-success text-center";
+  message.className = "alert alert-success text-center cart-alert";
   message.innerText = productName + " added to cart!";
-  
+
   document.querySelector(".container").prepend(message);
 
   setTimeout(() => {
@@ -81,4 +88,5 @@ function addToCart(productName) {
 
 </body>
 </html>
+
 
