@@ -67,9 +67,18 @@ Back to Home
 
 <script>
 function addToCart(productName) {
-alert(productName + " added to cart!");
+  const message = document.createElement("div");
+  message.className = "alert alert-success text-center";
+  message.innerText = productName + " added to cart!";
+  
+  document.querySelector(".container").prepend(message);
+
+  setTimeout(() => {
+    message.remove();
+  }, 2000);
 }
 </script>
 
 </body>
 </html>
+
